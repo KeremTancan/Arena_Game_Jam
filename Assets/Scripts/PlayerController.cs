@@ -60,9 +60,4 @@ public class CharacterController2D : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-    }
 }
