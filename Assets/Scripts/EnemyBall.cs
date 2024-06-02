@@ -14,7 +14,6 @@ public class EnemyBall : MonoBehaviour
 
     void Start()
     {
-        // Find all objects tagged as "Kalp" and add them to the Healths array
         GameObject[] kalpObjects = GameObject.FindGameObjectsWithTag("Kalp");
         Healths = new GameObject[kalpObjects.Length];
         for (int i = 0; i < kalpObjects.Length; i++)
@@ -53,24 +52,18 @@ public class EnemyBall : MonoBehaviour
 
     void DestroyHealthItem()
     {
-        // Check if there are any health items left
         if (Healths.Length > 0)
         {
-            // Find the first non-null health item
             for (int i = 0; i < Healths.Length; i++)
             {
                 if (Healths[i] != null)
                 {
-                    // Destroy the health item
                     Destroy(Healths[i]);
-                    // Set the reference to null to mark it as destroyed
                     Healths[i] = null;
-                    // Exit the loop after destroying one item
                     break;
                 }
             }
-
-            // Check if all health items are destroyed
+            
             if (AllHealthItemsDestroyed())
             {
                 RestartScene();
@@ -80,7 +73,6 @@ public class EnemyBall : MonoBehaviour
 
     bool AllHealthItemsDestroyed()
     {
-        // Check if all health items are null
         foreach (GameObject health in Healths)
         {
             if (health != null)
@@ -93,7 +85,6 @@ public class EnemyBall : MonoBehaviour
 
     void RestartScene()
     {
-        // Restart the current scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
