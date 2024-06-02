@@ -9,6 +9,7 @@ public class ScoreCount : MonoBehaviour
     private int score;
     private int hscore;
 
+    private DiamondSpawner dia;
     void Start()
     {
         score = 0;
@@ -16,6 +17,8 @@ public class ScoreCount : MonoBehaviour
         
         hscore = PlayerPrefs.GetInt("HighScore", 0);
         HScore.text = hscore.ToString();
+        
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
