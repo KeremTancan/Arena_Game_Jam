@@ -204,25 +204,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181441878}
   m_CullTransparentMesh: 1
---- !u!1 &202486875 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3865757313258820289, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
-  m_PrefabInstance: {fileID: 5610907330717396473}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &202486883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202486875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56ab8f0b1339f6d409689176616638b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HScore: {fileID: 381196763}
-  Score: {fileID: 762197443}
 --- !u!4 &266344747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6204572896771748393, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
@@ -625,7 +606,7 @@ GameObject:
   - component: {fileID: 898007562}
   m_Layer: 5
   m_Name: Kalp
-  m_TagString: Untagged
+  m_TagString: Kalp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -934,8 +915,8 @@ GameObject:
   - component: {fileID: 1029045556}
   - component: {fileID: 1029045555}
   m_Layer: 5
-  m_Name: Kalp (1)
-  m_TagString: Untagged
+  m_Name: 'Kalp '
+  m_TagString: Kalp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1009,8 +990,8 @@ GameObject:
   - component: {fileID: 1090988355}
   - component: {fileID: 1090988354}
   m_Layer: 5
-  m_Name: Kalp (2)
-  m_TagString: Untagged
+  m_Name: 'Kalp '
+  m_TagString: Kalp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1290,9 +1271,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 898007561}
-  - {fileID: 1029045554}
   - {fileID: 1090988353}
+  - {fileID: 1029045554}
+  - {fileID: 898007561}
   m_Father: {fileID: 996505756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -1313,6 +1294,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1428153904309266067, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
+      propertyPath: Score
+      value: 
+      objectReference: {fileID: 762197443}
+    - target: {fileID: 1428153904309266067, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
+      propertyPath: HScore
+      value: 
+      objectReference: {fileID: 381196763}
     - target: {fileID: 3865757313258820289, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1357,25 +1346,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6372930085476428702, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9070407730711151211, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
-      propertyPath: jumpForce
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9070407730711151211, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3865757313258820289, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 202486883}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

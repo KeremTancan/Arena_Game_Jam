@@ -33,13 +33,13 @@ namespace SimpleInputNamespace
         private void OnEnable()
         {
             xAxis.StartTracking();
-            yAxis.StartTracking(); // Start tracking vertical input
+            yAxis.StartTracking();
         }
 
         private void OnDisable()
         {
             xAxis.StopTracking();
-            yAxis.StopTracking(); // Stop tracking vertical input
+            yAxis.StopTracking(); 
         }
 
 #if UNITY_EDITOR

@@ -27,22 +27,18 @@ public class CombinedCharacterController2D : MonoBehaviour
 
     void Update()
     {
-        // Handle Input
         inputHorizontal = SimpleInput.GetAxis(horizontalAxis);
         inputVertical = SimpleInput.GetAxis(verticalAxis);
-
-        // Handle Jumping
+        
         if (inputVertical > 0 && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-
-        // Update Animation
+        
         animator.SetFloat("Speed", Mathf.Abs(inputHorizontal));
         animator.SetBool("isGrounded", IsGrounded());
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
-
-        // Handle Facing Direction
+        
         if (inputHorizontal > 0 && !facingRight)
         {
             Flip();
@@ -55,7 +51,6 @@ public class CombinedCharacterController2D : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Handle Movement
         rb.velocity = new Vector2(inputHorizontal * moveSpeed, rb.velocity.y);
     }
 
