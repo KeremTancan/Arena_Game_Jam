@@ -9,7 +9,7 @@ public class BallMovement : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject,10f);
+        Destroy(gameObject,7f);
     }
 
     private void Update()
