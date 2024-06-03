@@ -9,7 +9,7 @@ public class BallSpawner : MonoBehaviour
     public Transform spawnPoint2; 
     public GameObject warningIndicator; 
     public float warningDuration = 2f; 
-    private Vector2 warningOffset = new Vector2(-2f, 0f); 
+    public Vector2 warningOffset = new Vector2(-2f, 0f); 
 
     private float timeSinceLastSpawn;
 
