@@ -448,6 +448,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7360177312477796435, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360177312477796435, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+      propertyPath: m_Color.g
+      value: 0.21644846
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360177312477796435, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
