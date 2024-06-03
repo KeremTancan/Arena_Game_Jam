@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CharacterController2D : MonoBehaviour
 {
+    #region Tanımlamalar
+
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public Transform groundCheck;
     public LayerMask groundLayer;
-    public float groundCheckRadius = 0.2f;
+    public float groundCheckRadius = 0.1f;
 
     public string horizontalAxis = "Horizontal";
     public string verticalAxis = "Vertical";
@@ -19,17 +20,20 @@ public class CharacterController2D : MonoBehaviour
     private bool facingRight = true;
     private float inputHorizontal;
     private float inputVertical;
-    
+
     private GameObject[] Healths;
-    
+
     public GameObject Panel;
+
+    #endregion
+
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         Panel.SetActive(false);
-        
+
         GameObject[] kalpObjects = GameObject.FindGameObjectsWithTag("Kalp");
         Healths = new GameObject[kalpObjects.Length];
         for (int i = 0; i < kalpObjects.Length; i++)
@@ -44,16 +48,18 @@ public class CharacterController2D : MonoBehaviour
     {
         inputHorizontal = SimpleInput.GetAxis(horizontalAxis);
         inputVertical = SimpleInput.GetAxis(verticalAxis);
-        
+
         if (inputVertical > 0 && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            SoundManager.Instance.PlayEffectSound(SoundManager.Instance.JumpSound);
         }
-        
+
+
         animator.SetFloat("Speed", Mathf.Abs(inputHorizontal));
         animator.SetBool("isGrounded", IsGrounded());
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
-        
+
         if (inputHorizontal > 0 && !facingRight)
         {
             Flip();
@@ -67,6 +73,7 @@ public class CharacterController2D : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(inputHorizontal * moveSpeed, rb.velocity.y);
+        
     }
 
     bool IsGrounded()
@@ -83,18 +90,21 @@ public class CharacterController2D : MonoBehaviour
     }
 
     #endregion
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
             animator.SetTrigger("Hit");
+            SoundManager.Instance.PlayEffectSound(SoundManager.Instance.HitSound);
             DestroyHealthItem();
         }
-        
+
         if (other.gameObject.CompareTag("BigEnemy"))
         {
             StartCoroutine(DestroyAllHealthAndRestart());
+            SoundManager.Instance.PlayEffectSound(SoundManager.Instance.HitSound);
+            animator.SetTrigger("Dead");
         }
     }
 
@@ -111,10 +121,11 @@ public class CharacterController2D : MonoBehaviour
                     break;
                 }
             }
-            
+
             if (AllHealthItemsDestroyed())
             {
                 Panel.SetActive(true);
+                animator.SetTrigger("Dead");
             }
         }
     }
@@ -128,6 +139,7 @@ public class CharacterController2D : MonoBehaviour
                 return false;
             }
         }
+
         return true;
     }
 
@@ -144,5 +156,4 @@ public class CharacterController2D : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Panel.SetActive(true);
     }
-    
 }

@@ -9,13 +9,15 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] private AudioSource EffectSource;
 
-    [SerializeField] private AudioClip jumpSoundEffect;
+    [SerializeField] private AudioClip hitSound;
     [SerializeField] private AudioClip coinSound;
-    [SerializeField] private AudioClip teleportSound;   
+    [SerializeField] private AudioClip teleportSound;  
+    [SerializeField] private AudioClip jumpSound;
 
-    public AudioClip JumpSoundEffect { get => jumpSoundEffect; set => jumpSoundEffect = value; }
+    public AudioClip HitSound { get => hitSound; set => hitSound = value; }
     public AudioClip CoinSound { get => coinSound; set => coinSound = value; }
     public AudioClip TeleportSound { get => teleportSound; set => teleportSound = value; }
+    public AudioClip JumpSound { get => jumpSound; set => jumpSound = value; }
 
     private void Awake()
     {
@@ -30,14 +32,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    //public void RunSound()
-    //{
-      //  RunSource.Play();
-   // }
-   // public void StopRunSound()
-   // {
-    //    RunSource.Stop();
-   // }
+    
     public void PlayEffectSound(AudioClip clipToPlay)
     {
         //if (EffectSource.isPlaying) return;
