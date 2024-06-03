@@ -7,9 +7,9 @@ public class EnemyBall : MonoBehaviour
 {
     public Transform[] patrolPoints;
     public float moveSpeed = 2f;
-    public float rotationSpeed = 100f;
-
-    private int currentPointIndex; 
+    public float rotationSpeed = 100f; 
+    private int currentPointIndex;
+    
 
     void Update()
     {

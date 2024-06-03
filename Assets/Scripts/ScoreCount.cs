@@ -25,6 +25,7 @@ public class ScoreCount : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Elmas"))
         {
+            SoundManager.Instance.PlayEffectSound(SoundManager.Instance.CoinSound);
             score++;
             Score.text = score.ToString();
             Destroy(other.gameObject);

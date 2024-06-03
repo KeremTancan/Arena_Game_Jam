@@ -11,6 +11,7 @@ public class Portal : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.transform.position = teleportTarget.position;
+            SoundManager.Instance.PlayEffectSound(SoundManager.Instance.TeleportSound);
         }
     }
 }

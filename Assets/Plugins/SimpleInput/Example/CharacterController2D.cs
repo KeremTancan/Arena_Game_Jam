@@ -21,11 +21,14 @@ public class CharacterController2D : MonoBehaviour
     private float inputVertical;
     
     private GameObject[] Healths;
+    
+    public GameObject Panel;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        Panel.SetActive(false);
         
         GameObject[] kalpObjects = GameObject.FindGameObjectsWithTag("Kalp");
         Healths = new GameObject[kalpObjects.Length];
@@ -85,6 +88,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            animator.SetTrigger("Hit");
             DestroyHealthItem();
         }
         
@@ -110,7 +114,7 @@ public class CharacterController2D : MonoBehaviour
             
             if (AllHealthItemsDestroyed())
             {
-                RestartScene();
+                Panel.SetActive(true);
             }
         }
     }
@@ -138,11 +142,7 @@ public class CharacterController2D : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
-        RestartScene();
+        Panel.SetActive(true);
     }
-
-    void RestartScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    
 }
