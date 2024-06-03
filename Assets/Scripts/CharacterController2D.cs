@@ -23,16 +23,21 @@ public class CharacterController2D : MonoBehaviour
 
     private GameObject[] Healths;
 
-    public GameObject Panel;
+    public GameObject LosePanel;
+    public GameObject WinPanel;
+    
+    public float finishTime; 
+    private float timer;
+    private bool timerRunning;
 
     #endregion
-
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        Panel.SetActive(false);
+        LosePanel.SetActive(false);
+        WinPanel.SetActive(false);
 
         GameObject[] kalpObjects = GameObject.FindGameObjectsWithTag("Kalp");
         Healths = new GameObject[kalpObjects.Length];
@@ -40,12 +45,25 @@ public class CharacterController2D : MonoBehaviour
         {
             Healths[i] = kalpObjects[i];
         }
+        
+        timer = finishTime;
+        timerRunning = true;
     }
 
     #region Movement
 
     void Update()
     {
+        if (timerRunning)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                timerRunning = false;
+                OnTimerFinish();
+            }
+        }
+
         inputHorizontal = SimpleInput.GetAxis(horizontalAxis);
         inputVertical = SimpleInput.GetAxis(verticalAxis);
 
@@ -54,7 +72,6 @@ public class CharacterController2D : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             SoundManager.Instance.PlayEffectSound(SoundManager.Instance.JumpSound);
         }
-
 
         animator.SetFloat("Speed", Mathf.Abs(inputHorizontal));
         animator.SetBool("isGrounded", IsGrounded());
@@ -73,7 +90,6 @@ public class CharacterController2D : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(inputHorizontal * moveSpeed, rb.velocity.y);
-        
     }
 
     bool IsGrounded()
@@ -124,7 +140,7 @@ public class CharacterController2D : MonoBehaviour
 
             if (AllHealthItemsDestroyed())
             {
-                Panel.SetActive(true);
+                LosePanel.SetActive(true);
                 animator.SetTrigger("Dead");
             }
         }
@@ -154,6 +170,12 @@ public class CharacterController2D : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
-        Panel.SetActive(true);
+        LosePanel.SetActive(true);
+    }
+
+    void OnTimerFinish()
+    {
+       gameObject.SetActive((false));
+        WinPanel.SetActive(true);
     }
 }
