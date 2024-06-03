@@ -8,6 +8,7 @@ TagManager:
   - Elmas
   - Enemy
   - Kalp
+  - BigEnemy
   layers:
   - Default
   - TransparentFX

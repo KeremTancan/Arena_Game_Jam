@@ -213,7 +213,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.57
+  m_Radius: 0.5
 --- !u!114 &6243853068062521052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1140,11 +1140,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -12.111882, y: 8.735905}
-  - {x: -12.075287, y: -8.958631}
-  - {x: 12.190975, y: -8.948087}
-  - {x: 12.237962, y: 8.706767}
-  - {x: -12.098911, y: 8.678228}
+  - {x: -12, y: 8.706767}
+  - {x: -12, y: -8.958631}
+  - {x: 12, y: -8.958631}
+  - {x: 12, y: 8.706767}
+  - {x: -12, y: 8.706767}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
