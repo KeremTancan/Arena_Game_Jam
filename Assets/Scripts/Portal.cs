@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    public Transform teleportTarget;  // The location where the player will be teleported
-
+    public Transform teleportTarget;
+  
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

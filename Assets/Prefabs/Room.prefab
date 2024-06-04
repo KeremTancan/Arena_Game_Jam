@@ -175,6 +175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportTarget: {fileID: 0}
+  Effect: {fileID: 6813416509558619124, guid: 3b7f2c753d435d647a80f1f047a113e3, type: 3}
+  sortingLayerName: Player
+  sortingOrder: 2
 --- !u!1 &793943961911297041
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +653,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportTarget: {fileID: 0}
+  Effect: {fileID: 6813416509558619124, guid: 3b7f2c753d435d647a80f1f047a113e3, type: 3}
+  sortingLayerName: Player
+  sortingOrder: 2
 --- !u!1 &2885385156813180393
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,6 +983,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportTarget: {fileID: 0}
+  Effect: {fileID: 6813416509558619124, guid: 3b7f2c753d435d647a80f1f047a113e3, type: 3}
+  sortingLayerName: Player
+  sortingOrder: 2
 --- !u!1 &4309269286172782871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,6 +1259,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportTarget: {fileID: 0}
+  Effect: {fileID: 6813416509558619124, guid: 3b7f2c753d435d647a80f1f047a113e3, type: 3}
+  sortingLayerName: Player
+  sortingOrder: 2
 --- !u!1 &4618907614582980990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,7 +1572,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: -631155912, guid: 647450ba17135774fb5972a3c1eb9325, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1872,7 +1884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6204572896771748393}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Teleport
   m_TagString: Untagged
   m_Icon: {fileID: 0}

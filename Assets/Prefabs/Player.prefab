@@ -206,6 +206,7 @@ MonoBehaviour:
   verticalAxis: Vertical
   LosePanel: {fileID: 0}
   WinPanel: {fileID: 0}
+  finishTime: 0
 --- !u!114 &1428153904309266067
 MonoBehaviour:
   m_ObjectHideFlags: 0
