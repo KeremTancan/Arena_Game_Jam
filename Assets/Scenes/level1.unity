@@ -1402,8 +1402,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 7787178916243149148, guid: 24707428a7f8ba94f9b47299e7ee3665, type: 3}
   spawnInterval: 10
-  spawnPoint1: {fileID: 1919185497}
-  spawnPoint2: {fileID: 1433450348}
   warningIndicator: {fileID: 4867071862318717699, guid: f3fd939fd52f2f54180e9e3ea281f937, type: 3}
   warningDuration: 2
   warningOffset: {x: -2, y: 0}
@@ -2397,8 +2395,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1433450348}
   m_Layer: 0
-  m_Name: sp2
-  m_TagString: Untagged
+  m_Name: sp
+  m_TagString: sp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2692,8 +2690,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1919185497}
   m_Layer: 0
-  m_Name: sp1
-  m_TagString: Untagged
+  m_Name: sp
+  m_TagString: sp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3029,6 +3027,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4227577752828390027, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
+      propertyPath: Score
+      value: 
+      objectReference: {fileID: 762197443}
+    - target: {fileID: 4227577752828390027, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
+      propertyPath: HScore
+      value: 
+      objectReference: {fileID: 381196763}
+    - target: {fileID: 4595285981330129304, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
+      propertyPath: Score
+      value: 
+      objectReference: {fileID: 762197443}
+    - target: {fileID: 4595285981330129304, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
+      propertyPath: HScore
+      value: 
+      objectReference: {fileID: 381196763}
     - target: {fileID: 6252483042640085879, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3077,6 +3091,10 @@ PrefabInstance:
       propertyPath: LosePanel
       value: 
       objectReference: {fileID: 644871166}
+    - target: {fileID: 9070407730711151211, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
+      propertyPath: finishTime
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Kalp
   - BigEnemy
+  - sp
   layers:
   - Default
   - TransparentFX

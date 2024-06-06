@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2045802332317826286}
   - component: {fileID: 8560338679054021124}
   - component: {fileID: 9070407730711151211}
-  - component: {fileID: 1428153904309266067}
+  - component: {fileID: 4227577752828390027}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -207,7 +207,7 @@ MonoBehaviour:
   LosePanel: {fileID: 0}
   WinPanel: {fileID: 0}
   finishTime: 60
---- !u!114 &1428153904309266067
+--- !u!114 &4227577752828390027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

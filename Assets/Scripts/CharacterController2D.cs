@@ -48,6 +48,7 @@ public class CharacterController2D : MonoBehaviour
         
         timer = finishTime;
         timerRunning = true;
+        
     }
 
     #region Movement
@@ -121,6 +122,7 @@ public class CharacterController2D : MonoBehaviour
             StartCoroutine(DestroyAllHealthAndRestart());
             SoundManager.Instance.PlayEffectSound(SoundManager.Instance.HitSound);
             animator.SetTrigger("Dead");
+            ScoreCount.score = 0;
         }
     }
 
@@ -140,6 +142,7 @@ public class CharacterController2D : MonoBehaviour
 
             if (AllHealthItemsDestroyed())
             {
+                ScoreCount.score = 0;
                 LosePanel.SetActive(true);
                 animator.SetTrigger("Dead");
             }
@@ -148,6 +151,7 @@ public class CharacterController2D : MonoBehaviour
 
     bool AllHealthItemsDestroyed()
     {
+        
         foreach (GameObject health in Healths)
         {
             if (health != null)
@@ -171,6 +175,7 @@ public class CharacterController2D : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         LosePanel.SetActive(true);
+        
     }
 
     void OnTimerFinish()
