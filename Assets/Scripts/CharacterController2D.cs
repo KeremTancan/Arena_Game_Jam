@@ -128,6 +128,7 @@ public class CharacterController2D : MonoBehaviour
             animator.SetTrigger("Dead");
             ScoreCount.score = 0;
             SoundManager.Instance.PlayEffectSound(SoundManager.Instance.LoseSound);
+            gameObject.SetActive((false));
         }
     }
 
@@ -151,6 +152,7 @@ public class CharacterController2D : MonoBehaviour
                 LosePanel.SetActive(true);
                 animator.SetTrigger("Dead");
                 SoundManager.Instance.PlayEffectSound(SoundManager.Instance.LoseSound);
+                gameObject.SetActive((false));
             }
         }
     }
