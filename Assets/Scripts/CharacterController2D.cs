@@ -129,6 +129,7 @@ public class CharacterController2D : MonoBehaviour
             ScoreCount.score = 0;
             SoundManager.Instance.PlayEffectSound(SoundManager.Instance.LoseSound);
             gameObject.SetActive((false));
+            LosePanel.SetActive(true);
         }
     }
 
@@ -182,7 +183,6 @@ public class CharacterController2D : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
-        LosePanel.SetActive(true);
         
     }
 

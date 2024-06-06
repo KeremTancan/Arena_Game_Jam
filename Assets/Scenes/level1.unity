@@ -236,8 +236,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41, y: -645}
-  m_SizeDelta: {x: 67.4407, y: 62.519}
+  m_AnchoredPosition: {x: -24.0731, y: -645}
+  m_SizeDelta: {x: 101.2944, y: 62.519}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &149354088
 MonoBehaviour:
@@ -1165,6 +1165,14 @@ PrefabInstance:
       propertyPath: teleportTarget
       value: 
       objectReference: {fileID: 266344747}
+    - target: {fileID: 2434291724541663638, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434291724541663638, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2821070040087435037, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -1225,6 +1233,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6243853068062521052, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1676264854}
+    - target: {fileID: 6243853068062521052, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1465559403}
+    - target: {fileID: 6243853068062521052, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+      propertyPath: patrolPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 979755488}
+    - target: {fileID: 6243853068062521052, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+      propertyPath: patrolPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1022857584}
     - target: {fileID: 7360177312477796435, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -1277,7 +1301,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5f463902591145c41b8ab11a1798d310, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1373,7 +1397,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 26e19616f6ba9f6469e9d3d6c38b23fe, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2111,6 +2135,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afec60b2ce5345c4782cc0a45e5fa926, type: 3}
+--- !u!4 &979755488 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5129984149352583435, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+  m_PrefabInstance: {fileID: 682866727}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &996505752
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,6 +2260,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a7d25f26c5c6c34bb9d3d53f87b2653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1022857584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1846350638719870174, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+  m_PrefabInstance: {fileID: 682866727}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1029045553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2692,6 +2726,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 859542418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1465559403 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2279057092022892746, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+  m_PrefabInstance: {fileID: 682866727}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1478262319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2771,6 +2810,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478262319}
   m_CullTransparentMesh: 1
+--- !u!4 &1676264854 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1222323814161720948, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
+  m_PrefabInstance: {fileID: 682866727}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1704199277
 GameObject:
   m_ObjectHideFlags: 0
