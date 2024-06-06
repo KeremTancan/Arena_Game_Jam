@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class CharacterController2D : MonoBehaviour
     private float timer;
     private bool timerRunning;
 
+    public Text TimerText;
+
     #endregion
 
     void Awake()
@@ -57,6 +60,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if (timerRunning)
         {
+            TimerText.text = timer.ToString();
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
@@ -123,6 +127,7 @@ public class CharacterController2D : MonoBehaviour
             SoundManager.Instance.PlayEffectSound(SoundManager.Instance.HitSound);
             animator.SetTrigger("Dead");
             ScoreCount.score = 0;
+            SoundManager.Instance.PlayEffectSound(SoundManager.Instance.LoseSound);
         }
     }
 
@@ -145,6 +150,7 @@ public class CharacterController2D : MonoBehaviour
                 ScoreCount.score = 0;
                 LosePanel.SetActive(true);
                 animator.SetTrigger("Dead");
+                SoundManager.Instance.PlayEffectSound(SoundManager.Instance.LoseSound);
             }
         }
     }
@@ -182,5 +188,6 @@ public class CharacterController2D : MonoBehaviour
     {
        gameObject.SetActive((false));
         WinPanel.SetActive(true);
+        SoundManager.Instance.PlayEffectSound(SoundManager.Instance.WinSound);
     }
 }
