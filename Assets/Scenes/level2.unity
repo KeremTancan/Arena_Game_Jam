@@ -224,15 +224,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 621155668823237642, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: m_Color.b
-      value: 0.8627451
+      value: 0.7132075
       objectReference: {fileID: 0}
     - target: {fileID: 621155668823237642, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: m_Color.g
-      value: 0.37254903
+      value: 0.33779505
       objectReference: {fileID: 0}
     - target: {fileID: 621155668823237642, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.052481227
       objectReference: {fileID: 0}
     - target: {fileID: 1251563513507438379, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: teleportTarget
@@ -792,11 +792,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 621155668823237642, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: m_Color.g
-      value: 0.645283
+      value: 0.64705884
       objectReference: {fileID: 0}
     - target: {fileID: 621155668823237642, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: m_Color.r
-      value: 0.037506163
+      value: 0.08271201
       objectReference: {fileID: 0}
     - target: {fileID: 1251563513507438379, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: teleportTarget
@@ -1895,7 +1895,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 621155668823237642, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: m_Color.g
-      value: 0.68743044
+      value: 0.6842325
       objectReference: {fileID: 0}
     - target: {fileID: 621155668823237642, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: m_Color.r
@@ -3301,25 +3301,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3865757313258820289, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6252483042640085879, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 6252483042640085879, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 6252483042640085879, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.65
-      objectReference: {fileID: 0}
     - target: {fileID: 6252483042640085879, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.37
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: 6252483042640085879, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3365,10 +3349,6 @@ PrefabInstance:
       propertyPath: LosePanel
       value: 
       objectReference: {fileID: 644871166}
-    - target: {fileID: 9070407730711151211, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
-      propertyPath: finishTime
-      value: 60
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -958,15 +958,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 621155668823237642, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: m_Color.b
-      value: 0.86415094
+      value: 0.7137255
       objectReference: {fileID: 0}
     - target: {fileID: 621155668823237642, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: m_Color.g
-      value: 0.37084863
+      value: 0.3372549
       objectReference: {fileID: 0}
     - target: {fileID: 621155668823237642, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.050980393
       objectReference: {fileID: 0}
     - target: {fileID: 1251563513507438379, guid: 31bfde62547a52843b0bc60ee9dd8e91, type: 3}
       propertyPath: teleportTarget
@@ -3077,10 +3077,6 @@ PrefabInstance:
       propertyPath: LosePanel
       value: 
       objectReference: {fileID: 644871166}
-    - target: {fileID: 9070407730711151211, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
-      propertyPath: finishTime
-      value: 30
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
