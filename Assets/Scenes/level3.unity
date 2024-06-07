@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &107433032
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3930,10 +3930,6 @@ PrefabInstance:
       propertyPath: TimerText
       value: 
       objectReference: {fileID: 244691741}
-    - target: {fileID: 9070407730711151211, guid: 85d590c8620c71b46841ff1aa5c5bac9, type: 3}
-      propertyPath: finishTime
-      value: 60
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
